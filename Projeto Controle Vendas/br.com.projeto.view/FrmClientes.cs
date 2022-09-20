@@ -161,5 +161,30 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view {
             gridCliente.DataSource = objDAO.listarClienteNome(nome);
 
         }
+
+        private void btnCep_Click(object sender, EventArgs e)
+        {
+            // Botão Consultar CEP
+            try
+            {
+                string cep = txtCep.Text;
+                string xml = $"https://viacep.com.br/ws/{cep}/xml/";
+                
+                // Intanciamos um obj da classe DataSet.
+                DataSet dados = new DataSet();
+
+                dados.ReadXml(xml);
+
+                txtEndereco.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+                txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+                txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+                txtComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+                txtEstado.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+
+            } catch (Exception)
+            {
+                MessageBox.Show("Endereço não encontrado!");
+            }
+        }
     }
 }

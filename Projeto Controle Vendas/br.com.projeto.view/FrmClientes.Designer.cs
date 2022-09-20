@@ -64,6 +64,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtConsultaNome = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnCep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -105,6 +106,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCep);
             this.tabPage1.Controls.Add(this.btnEditar);
             this.tabPage1.Controls.Add(this.btnExcluir);
             this.tabPage1.Controls.Add(this.btnSalvar);
@@ -330,16 +332,16 @@
             // txtCep
             // 
             this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCep.Location = new System.Drawing.Point(587, 155);
+            this.txtCep.Location = new System.Drawing.Point(527, 155);
             this.txtCep.Mask = "#####-###";
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(110, 29);
+            this.txtCep.Size = new System.Drawing.Size(96, 29);
             this.txtCep.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(541, 163);
+            this.label9.Location = new System.Drawing.Point(481, 163);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 21);
             this.label9.TabIndex = 14;
@@ -351,7 +353,7 @@
             this.txtCelular.Location = new System.Drawing.Point(350, 155);
             this.txtCelular.Mask = "(##)#####-####";
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(172, 29);
+            this.txtCelular.Size = new System.Drawing.Size(113, 29);
             this.txtCelular.TabIndex = 13;
             // 
             // label8
@@ -526,6 +528,19 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome:";
             // 
+            // btnCep
+            // 
+            this.btnCep.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCep.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCep.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCep.Location = new System.Drawing.Point(629, 155);
+            this.btnCep.Name = "btnCep";
+            this.btnCep.Size = new System.Drawing.Size(68, 31);
+            this.btnCep.TabIndex = 33;
+            this.btnCep.Text = "Buscar";
+            this.btnCep.UseVisualStyleBackColor = false;
+            this.btnCep.Click += new System.EventHandler(this.btnCep_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,5 +610,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtConsultaNome;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnCep;
     }
 }
