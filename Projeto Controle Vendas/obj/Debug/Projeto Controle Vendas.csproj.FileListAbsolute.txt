@@ -33,3 +33,4 @@ C:\MATERIAIS\ControleVendas\Projeto Controle Vendas\obj\Debug\Projeto Controle V
 C:\MATERIAIS\ControleVendas\Projeto Controle Vendas\obj\Debug\Projeto Controle Vendas.csproj.CopyComplete
 C:\MATERIAIS\ControleVendas\Projeto Controle Vendas\obj\Debug\Projeto Controle Vendas.exe
 C:\MATERIAIS\ControleVendas\Projeto Controle Vendas\obj\Debug\Projeto Controle Vendas.pdb
+C:\MATERIAIS\ControleVendas\Projeto Controle Vendas\obj\Debug\Projeto_Controle_Vendas.br.com.projeto.view.FrmFuncionarios.resources
