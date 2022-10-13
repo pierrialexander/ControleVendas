@@ -59,7 +59,8 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
                 MessageBox.Show("Cliente cadastrado com sucesso!");
                 conexao.Close();
 
-            } catch (Exception erro)
+            } 
+            catch (Exception erro)
             {
                 MessageBox.Show($"Aconteceu uma falha {erro}");
             }
@@ -93,7 +94,8 @@ namespace Projeto_Controle_Vendas.br.com.projeto.dao
                 // 5 - Retorna o DataTable com os dados
                 return tabelaCliente;
 
-            } catch (Exception erro)
+            } 
+            catch (Exception erro)
             {
                 MessageBox.Show($"Erro ao executar comando SQL {erro}");
                 return null;

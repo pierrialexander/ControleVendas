@@ -27,6 +27,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCep = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -64,7 +66,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtConsultaNome = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnCep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -79,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 80);
+            this.panel1.Size = new System.Drawing.Size(757, 80);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -106,6 +107,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnLimpar);
             this.tabPage1.Controls.Add(this.btnCep);
             this.tabPage1.Controls.Add(this.btnEditar);
             this.tabPage1.Controls.Add(this.btnExcluir);
@@ -147,12 +149,38 @@
             this.tabPage1.Text = "Dados Pessoais";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnLimpar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLimpar.Location = new System.Drawing.Point(579, 348);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(118, 45);
+            this.btnLimpar.TabIndex = 34;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCep
+            // 
+            this.btnCep.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCep.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCep.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCep.Location = new System.Drawing.Point(629, 155);
+            this.btnCep.Name = "btnCep";
+            this.btnCep.Size = new System.Drawing.Size(68, 31);
+            this.btnCep.TabIndex = 33;
+            this.btnCep.Text = "Buscar";
+            this.btnCep.UseVisualStyleBackColor = false;
+            this.btnCep.Click += new System.EventHandler(this.btnCep_Click);
+            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditar.Location = new System.Drawing.Point(493, 348);
+            this.btnEditar.Location = new System.Drawing.Point(438, 348);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(118, 45);
             this.btnEditar.TabIndex = 32;
@@ -165,7 +193,7 @@
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(369, 348);
+            this.btnExcluir.Location = new System.Drawing.Point(297, 348);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(118, 45);
             this.btnExcluir.TabIndex = 31;
@@ -178,7 +206,7 @@
             this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(245, 348);
+            this.btnSalvar.Location = new System.Drawing.Point(159, 348);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 45);
             this.btnSalvar.TabIndex = 30;
@@ -191,12 +219,13 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnNovo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNovo.Location = new System.Drawing.Point(121, 348);
+            this.btnNovo.Location = new System.Drawing.Point(26, 348);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(118, 45);
             this.btnNovo.TabIndex = 28;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtEstado
             // 
@@ -528,24 +557,11 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome:";
             // 
-            // btnCep
-            // 
-            this.btnCep.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCep.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCep.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCep.Location = new System.Drawing.Point(629, 155);
-            this.btnCep.Name = "btnCep";
-            this.btnCep.Size = new System.Drawing.Size(68, 31);
-            this.btnCep.TabIndex = 33;
-            this.btnCep.Text = "Buscar";
-            this.btnCep.UseVisualStyleBackColor = false;
-            this.btnCep.Click += new System.EventHandler(this.btnCep_Click);
-            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 532);
+            this.ClientSize = new System.Drawing.Size(757, 532);
             this.Controls.Add(this.tabClientes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -611,5 +627,6 @@
         private System.Windows.Forms.TextBox txtConsultaNome;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnCep;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

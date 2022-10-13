@@ -186,5 +186,15 @@ namespace Projeto_Controle_Vendas.br.com.projeto.view {
                 MessageBox.Show("Endereço não encontrado!");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Helpers().LimparTela(this);
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            new Helpers().LimparTela(this);
+        }
     }
 }
